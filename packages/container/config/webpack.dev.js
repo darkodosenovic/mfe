@@ -9,7 +9,7 @@ const devConfig = {
   devServer: {
     
     historyApiFallback: { 
-        index: 'index.html' 
+        index: '/index.html' 
     }
   },
   plugins: [
