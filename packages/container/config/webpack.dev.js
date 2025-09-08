@@ -6,6 +6,9 @@ packageJson
 
 const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:8080/',
+  },
   devServer: {
     
     historyApiFallback: { 
@@ -18,6 +21,7 @@ const devConfig = {
       filename: 'remoteEntry.js',
       remotes: {
         marketing: 'marketing@http://localhost:8081/remoteEntry.js',
+        auth: 'auth@http://localhost:8082/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
